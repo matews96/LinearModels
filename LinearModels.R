@@ -82,10 +82,20 @@ model62 <- lm(y~x5, data = myData)
 model63 <- lm(y~x6, data = myData)
 
 
+models<-list(model1, model2, model3, model4, model5, model6, model7, model8,
+             model9, model10, model11, model12, model13, model14, model15, model16,
+             model17, model18, model19, model20, model21, model22,model23, model24,
+             model25, model26, model27, model28, model29, model30, model31, model32,
+             model33, model34, model35, model36, model37, model38, model39, model40,
+             model41, model42, model43, model44, model45, model46, model47, model48,
+             model49, model50, model51, model52, model53, model52, model53, model54,
+             model55, model56, model57, model58, model59, model60, model61, model62, model63)
 
 
-
-
+for(i in 1:6) {
+  show(typeof((models[i])))
+  print("----------------------------------")
+}
 
 
 
