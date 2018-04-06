@@ -88,16 +88,21 @@ models<-list(model1, model2, model3, model4, model5, model6, model7, model8,
              model25, model26, model27, model28, model29, model30, model31, model32,
              model33, model34, model35, model36, model37, model38, model39, model40,
              model41, model42, model43, model44, model45, model46, model47, model48,
-             model49, model50, model51, model52, model53, model52, model53, model54,
-             model55, model56, model57, model58, model59, model60, model61, model62, model63)
+             model49, model50, model51, model52, model53, model54, model55, model56,
+             model57, model58, model59, model60, model61, model62, model63)
 
-
-for(i in 1:6) {
-  show(typeof((models[i])))
-  print("----------------------------------")
+ac=AIC(pef)
+for(model in models) {
+  
+  show(summary(model))
+  ac<-c(ac,AIC(model))
+  
+  
 }
 
+min(ac)
 
+which(ac == min(ac))
 
 
 
